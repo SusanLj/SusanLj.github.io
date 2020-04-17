@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>mmd语法练习</title>
+      <link href="/2020/04/17/mmd-yu-fa-lian-xi/"/>
+      <url>/2020/04/17/mmd-yu-fa-lian-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="md文件一些基本的编辑"><a href="#md文件一些基本的编辑" class="headerlink" title="md文件一些基本的编辑"></a>md文件一些基本的编辑</h1><h2 id="需要的编辑软件"><a href="#需要的编辑软件" class="headerlink" title="需要的编辑软件"></a>需要的编辑软件</h2><ul><li>Typora<br>建议在国内的网站下载，速度应该快一点  </li><li>Vscode<br>轻量级文件编辑器  </li></ul><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3301627600,2968220964&amp;fm=26&amp;gp=0.jpg" alt=""></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">该主题使用说明链接</a></p><p>1.就放弃我，让我继续坠落</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 博客搭建总结</title>
+      <link href="/2020/04/17/hhexo-bo-ke-da-jian-zong-jie/"/>
+      <url>/2020/04/17/hhexo-bo-ke-da-jian-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<p>1.首先到官网下载node.js，安装到自己指定的目录</p><p>2.要有一个github账号，设置公钥私钥，公钥私钥的生成使用git（生成的步骤可查看git中的笔记）</p><p>3.在 github 上创建一个仓库，取名为 username.github.io </p><p>4.创建一个文件夹，在这个文件夹中生成 .git 文件，使用 git init 命令</p><a id="more"></a><p>5.将该文件夹与你所创建的远程仓库关联 git remote add origin url.git </p><p>6.在 git命令窗口使用 npm 安装 hexo，具体命令为 npm install -g hexo </p><p>7.创建一个hexo文件夹，进入这个文件夹 执行 hexo init 命令，初始化，会生成相关文件</p><p>8.执行 hexo g 生成命令</p>     <p>hexo s 预览命令     http://localhost:4000/</p><p>9.下载主题     git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</p><p>10.通过修改  _config.yml 文件来修改主题和相关配置</p><p>11.安装插件 npm install hexo-deployer-git --save     为上传到github的插件</p><p>12.修改 _config.yml 文件，填写提交方式和远程仓库地址</p><p>13.使用    hexo d 上传到github</p><p>14.上传到github上的文件在public文件夹中</p><p>15.通过    hexo new "name"    来生成文章，这条命令是在hexo的主目录下执行，会在    source/_posts    文件夹下生成md 文件，通过修改这个来修改文章内容。会自动在public文件夹下转换为  HTML 文件</p><p>16.    !--more-- 能产生 readmore效果</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>First blog</title>
+      <link href="/2020/04/17/first-blog/"/>
+      <url>/2020/04/17/first-blog/</url>
+      
+        <content type="html"><![CDATA[<p>第一篇博客文章</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
