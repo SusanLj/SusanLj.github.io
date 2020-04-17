@@ -5,8 +5,8 @@
     
     <entry>
       <title>md语法练习</title>
-      <link href="/2020/04/17/mmd-yu-fa-lian-xi/"/>
-      <url>/2020/04/17/mmd-yu-fa-lian-xi/</url>
+      <link href="/2020/04/17/md-yu-fa-lian-xi/"/>
+      <url>/2020/04/17/md-yu-fa-lian-xi/</url>
       
         <content type="html"><![CDATA[<h1 id="md文件一些基本的编辑"><a href="#md文件一些基本的编辑" class="headerlink" title="md文件一些基本的编辑"></a>md文件一些基本的编辑</h1><h2 id="需要的编辑软件"><a href="#需要的编辑软件" class="headerlink" title="需要的编辑软件"></a>需要的编辑软件</h2><ul><li>Typora<br>建议在国内的网站下载，速度应该快一点  </li><li>Vscode<br>轻量级文件编辑器  </li></ul><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3301627600,2968220964&amp;fm=26&amp;gp=0.jpg" alt=""></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md" target="_blank" rel="noopener">该主题使用说明链接</a></p><p>1.就放弃我，让我继续坠落</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
