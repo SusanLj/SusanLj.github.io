@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="First blog, 苏三的博客">
+    <meta name="keywords" content="git学习笔记, 苏三的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>First blog | 苏三的博客</title>
+    <title>git学习笔记 | 苏三的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">First blog</h1>
+                    <h1 class="description center-align post-title">git学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -428,9 +428,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -442,7 +446,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-04-17
+                    2020-04-18
                 </div>
                 
 
@@ -458,8 +462,68 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>第一篇博客文章</p>
-<script>
+                <h1 id="git-学习笔记"><a href="#git-学习笔记" class="headerlink" title="git 学习笔记"></a>git 学习笔记</h1><h2 id="相关命令"><a href="#相关命令" class="headerlink" title="相关命令"></a>相关命令</h2><pre><code>git branch  查看当前仓库的所有分支  
+
+git branch dev 在当前仓库创建一个名为dev的分支  
+
+git checkout -b dev 在当前仓库创建一个名为dev的分支并切换到dev分支
+git checkout dev 切换到dev分支
+git branch -d v1  删除v1分支   【先离开这个分支】
+
+合并分支
+git merge 分支名  
+
+git checkout -b dev origin/dev  关联远程分支
+
+推送到远程分支
+git push -u origin master
+git push origin dev
+
+拉取分支
+git pull origin master
+git pull
+
+推送和拉取中的-u都是指定默认主机（origin），指定之后可以不带参数。
+
+冲突问题？
+先合并
+再手动解决
+再添加
+
+删除文件
+先使用git rm -rf 文件名  删除
+再提交 一次
+
+Git reset –hard HEAD^  回退上一个版本  
+Git reset –hard 版本号  
+
+版本号可以使用git log 文件名查看  
+
+git init  初始仓库  
+
+git status 查看工作区的状态  如果出现working tree is clean 说明工具区里面的数据和分支的数据是一样的  
+
+git add  文件1   文件2   把文件提交到暂存区  
+
+git commit -m ‘批注信息’ 把当前分支的暂存的所有数据提交到当前分支  
+
+git diff 文件名   查看当前文件和当前分支的文件内容的区别 如果没有区别就不显示任何东西  </code></pre><h2 id="冲突解决和git的分区"><a href="#冲突解决和git的分区" class="headerlink" title="冲突解决和git的分区"></a>冲突解决和git的分区</h2><pre><code>1.git中分为工作区，暂存区，分支区，要先将文件add到暂存区再提交到分支区  
+
+2.内容的修改各分支都互不影响  
+
+3.分工合作时一个人将文件提交之后，另一个人在对文件进行修改之后必须执行命令来将其他人做的修改合并之后才能提交。执行 git pull origin 分支名，就是拉取远程仓库的文件，之后会进行合并。  
+
+4.git commit -m' ' 提交所有在暂存区的内容  
+
+5.你要修改github仓库中的内容的话，必须先将这个仓库克隆下来在进行推送，不然的话会被拒绝。
+
+6.当不同的两个目录（就是工作中两个人）分别提交代码时远程仓库跟自己的本地仓库不同，多了别人提交的代码，做出修改之后，直接提交会失败。应该先 git pull (-u origin master)，拉取远程仓库中的代码，这时你的本地仓库中的内容已经改变，需要自己手动的去修改自己的代码。</code></pre><h2 id="git在eclipse中的使用"><a href="#git在eclipse中的使用" class="headerlink" title="git在eclipse中的使用"></a>git在eclipse中的使用</h2><pre><code>1.将代码提交到码云或者github时，先在eclipse的window-&gt;preference里面的team里面配置github或者码云的账号，和以什么身份提交。没有密钥生成密钥，有密钥直接跳过。  
+
+2.鼠标右键team，先commit然后点击remote，然后push，填写远程仓库地址和github或者码云的账号和密码，之后直接push。  
+
+3.github和码云的ssh配置只需要配置一次就OK了。  
+
+4.在右键team之后点击pull..来拉取远程仓库的新增的内容，注意添加reference即远程仓库的分支名。</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -502,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://SusanLj.github.io/2020/04/17/first-blog/">http://SusanLj.github.io/2020/04/17/first-blog/</a>
+                    <a href="http://SusanLj.github.io/2020/04/18/git-xue-xi-bi-ji/">http://SusanLj.github.io/2020/04/18/git-xue-xi-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,7 +603,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -705,35 +773,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/04/17/hhexo-bo-ke-da-jian-zong-jie/">
+                <a href="/2020/04/18/git-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hexo 博客搭建总结">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="git学习笔记">
                         
-                        <span class="card-title">hexo 博客搭建总结</span>
+                        <span class="card-title">git学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            git 学习笔记相关命令git branch  查看当前仓库的所有分支  
 
-1.首先到官网下载node.js，安装到自己指定的目录
+git branch dev 在当前仓库创建一个名为dev的分支  
 
-2.要有一个github账号，设置公钥私钥，公钥私钥的生成使用git（生成的步骤可查看git中的笔记）
-
-3.在 github 上创建一个仓库，取名为 username.gith
+git checkout -b dev 在当前仓库创建一个名为dev的分支并切换到dev分
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -742,6 +809,15 @@
                         </span>
                     </div>
                 </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -749,26 +825,30 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/17/first-blog/">
+                <a href="/2020/04/17/md-yu-fa-lian-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="First blog">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="md语法练习">
                         
-                        <span class="card-title">First blog</span>
+                        <span class="card-title">md语法练习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一篇博客文章
+                            md文件一些基本的编辑需要的编辑软件
+Typora建议在国内的网站下载，速度应该快一点  
+Vscode轻量级文件编辑器  
 
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) 
+图片
+超链接该主题使用说明链接
+1.就放弃我，让我继续坠落
+
+        document.querySel
                         
                     </div>
                     <div class="publish-info">
@@ -783,7 +863,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/web/">
+                        <span class="chip bg-color">web</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
