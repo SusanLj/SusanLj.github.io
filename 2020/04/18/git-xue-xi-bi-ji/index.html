@@ -501,29 +501,41 @@ Git reset –hard 版本号
 
 git init  初始仓库  
 
-git status 查看工作区的状态  如果出现working tree is clean 说明工具区里面的数据和分支的数据是一样的  
+git status 查看工作区的状态  如果出现working tree is clean 说明工  
+具区里面的数据和分支的数据是一样的  
 
 git add  文件1   文件2   把文件提交到暂存区  
 
 git commit -m ‘批注信息’ 把当前分支的暂存的所有数据提交到当前分支  
 
-git diff 文件名   查看当前文件和当前分支的文件内容的区别 如果没有区别就不显示任何东西  </code></pre><h2 id="冲突解决和git的分区"><a href="#冲突解决和git的分区" class="headerlink" title="冲突解决和git的分区"></a>冲突解决和git的分区</h2><pre><code>1.git中分为工作区，暂存区，分支区，要先将文件add到暂存区再提交到分支区  
+git diff 文件名   查看当前文件和当前分支的文件内容的区别 如果没有区别  
+就不显示任何东西  </code></pre><h2 id="冲突解决和git的分区"><a href="#冲突解决和git的分区" class="headerlink" title="冲突解决和git的分区"></a>冲突解决和git的分区</h2><pre><code>1.git中分为工作区，暂存区，分支区，要先将文件add到暂存区再提交到分支区  
 
 2.内容的修改各分支都互不影响  
 
-3.分工合作时一个人将文件提交之后，另一个人在对文件进行修改之后必须执行命令来将其他人做的修改合并之后才能提交。执行 git pull origin 分支名，就是拉取远程仓库的文件，之后会进行合并。  
+3.分工合作时一个人将文件提交之后，另一个人在对文件进行修改之后必须执行  
+命令来将其他人做的修改合并之后才能提交。执行 git pull origin 分支名，就  
+是拉取远程仓库的文件，之后会进行合并。  
 
 4.git commit -m' ' 提交所有在暂存区的内容  
 
-5.你要修改github仓库中的内容的话，必须先将这个仓库克隆下来在进行推送，不然的话会被拒绝。
+5.你要修改github仓库中的内容的话，必须先将这个仓库克隆下来在进行推送，  
+不然的话会被拒绝。
 
-6.当不同的两个目录（就是工作中两个人）分别提交代码时远程仓库跟自己的本地仓库不同，多了别人提交的代码，做出修改之后，直接提交会失败。应该先 git pull (-u origin master)，拉取远程仓库中的代码，这时你的本地仓库中的内容已经改变，需要自己手动的去修改自己的代码。</code></pre><h2 id="git在eclipse中的使用"><a href="#git在eclipse中的使用" class="headerlink" title="git在eclipse中的使用"></a>git在eclipse中的使用</h2><pre><code>1.将代码提交到码云或者github时，先在eclipse的window-&gt;preference里面的team里面配置github或者码云的账号，和以什么身份提交。没有密钥生成密钥，有密钥直接跳过。  
+6.当不同的两个目录（就是工作中两个人）分别提交代码时远程仓库跟自己的本  
+地仓库不同，多了别人提交的代码，做出修改之后，直接提交会失败。应该先  
+git pull (-u origin master)，拉取远程仓库中的代码，这时你的本地仓库  
+中的内容已经改变，需要自己手动的去修改自己的代码。</code></pre><h2 id="git在eclipse中的使用"><a href="#git在eclipse中的使用" class="headerlink" title="git在eclipse中的使用"></a>git在eclipse中的使用</h2><pre><code>1.将代码提交到码云或者github时，先在eclipse的window-&gt;preference里面  
+的team里面配置github或者码云的账号，和以什么身份提交。没有密钥生成密钥，  
+有密钥直接跳过。  
 
-2.鼠标右键team，先commit然后点击remote，然后push，填写远程仓库地址和github或者码云的账号和密码，之后直接push。  
+2.鼠标右键team，先commit然后点击remote，然后push，填写远程仓库地址和  
+github或者码云的账号和密码，之后直接push。  
 
 3.github和码云的ssh配置只需要配置一次就OK了。  
 
-4.在右键team之后点击pull..来拉取远程仓库的新增的内容，注意添加reference即远程仓库的分支名。</code></pre><script>
+4.在右键team之后点击pull..来拉取远程仓库的新增的内容，注意  
+添加reference即远程仓库的分支名。</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -727,7 +739,7 @@ git diff 文件名   查看当前文件和当前分支的文件内容的区别 �
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">谢谢你请我吃糖</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
